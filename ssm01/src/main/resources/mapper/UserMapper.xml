@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+        <!-- 设置为IUserDao接口方法提供sql语句配置 -->
+<!--用于用户登录信息验证-->
+<mapper namespace="com.ssm.dao.IUserDao">
+<resultMap id="userList" type="com.ssm.pojo.User">
+    <id column="ID" property="ID" ></id>
+    <id column="Account" property="Account" ></id>
+    <id column="Pwd" property="Pwd" ></id>
+</resultMap>
+<select id="getAllUser" resultMap="userList">
+    SELECT * FROM login where id=1;
+</select>
+
+</mapper>

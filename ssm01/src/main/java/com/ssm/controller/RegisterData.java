@@ -1,0 +1,79 @@
+package com.ssm.controller;
+
+public class RegisterData {
+    // 注册界面
+
+    //   用户名
+    public String UserName;
+    //    用户密码
+    public String pass;
+    //    确认密码
+    public String checkPass;
+    //    姓名
+    public String UName;
+    //    用户ID（身份证号、港澳台居民证等）
+    public String IDcard;
+    //    用户邮箱
+    public String Email;
+    //    用户手机号
+    public String Phone;
+
+    //以下是Set 和 Get方法
+    public String getUserName() {
+        return UserName;
+    }
+
+    public void setUserName(String userName) {
+        UserName = userName;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public String getCheckPass() {
+        return checkPass;
+    }
+
+    public void setCheckPass(String checkPass) {
+        this.checkPass = checkPass;
+    }
+
+    public String getName() {
+        return UName;
+    }
+
+    public void setName(String name) {
+        UName = UName;
+    }
+
+    public String getID() {
+        return IDcard;
+    }
+
+    public void setID(String ID) {
+        this.IDcard = IDcard;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public String getPhone() {
+        return Phone;
+    }
+
+    public void setPhone(String phone) {
+        Phone = phone;
+    }
+}
+
+
