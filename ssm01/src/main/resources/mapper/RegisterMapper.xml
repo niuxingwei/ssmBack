@@ -7,7 +7,7 @@
         <id column="UserName" property="UserName"></id>
         <id column="pass" property="pass"></id>
         <id column="checkPass" property="checkPass"></id>
-        <id column="Name" property="Name"></id>
+        <id column="UName" property="UName"></id>
         <id column="IDcard" property="IDcard"></id>
         <id column="Email" property="Email"></id>
         <id column="Phone" property="Phone"></id>
@@ -17,5 +17,4 @@
         insert into register (UserName,pass,checkPass,UName,IDcard,Email,Phone)
         values (#{UserName},#{pass},#{checkPass},#{UName},#{IDcard},#{Email},#{Phone})
     </insert>
-
 </mapper>

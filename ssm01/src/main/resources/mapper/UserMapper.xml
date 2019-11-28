@@ -10,7 +10,8 @@
     <id column="Pwd" property="Pwd" ></id>
 </resultMap>
 <select id="getAllUser" resultMap="userList">
-    SELECT * FROM login where id=1;
+    SELECT *
+    FROM login
+    where id = 2;
 </select>
-
 </mapper>

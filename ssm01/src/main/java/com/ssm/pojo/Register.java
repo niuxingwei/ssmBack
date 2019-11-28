@@ -8,7 +8,7 @@ public class Register {
     //    确认密码
     private String checkPass;
     //    姓名
-    private String Name;
+    private String UName;
     //    用户ID（身份证号、港澳台居民证等）
     private String ID;
     //    用户邮箱
@@ -42,11 +42,11 @@ public class Register {
     }
 
     public String getName() {
-        return Name;
+        return UName;
     }
 
     public void setName(String name) {
-        Name = name;
+        UName = name;
     }
 
     public String getID() {
