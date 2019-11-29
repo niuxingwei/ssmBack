@@ -28,7 +28,6 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public List<Login> selectLoginUser(String account) {
-//        System.out.println(loginAccount.getAccount());
         System.out.println(account);
         return userDao.selectUser(account);
     }

@@ -4,21 +4,9 @@ public class RegisterData {
     // 注册界面
 
     //   用户名
-    public String UserName;
-    //    用户密码
-    public String pass;
-    //    确认密码
-    public String checkPass;
-    //    姓名
-    public String UName;
-    //    用户ID（身份证号、港澳台居民证等）
-    public String IDcard;
-    //    用户邮箱
-    public String Email;
-    //    用户手机号
-    public String Phone;
-
     //以下是Set 和 Get方法
+    public String UserName;
+
     public String getUserName() {
         return UserName;
     }
@@ -43,19 +31,19 @@ public class RegisterData {
         this.checkPass = checkPass;
     }
 
-    public String getName() {
+    public String getUName() {
         return UName;
     }
 
-    public void setName(String name) {
-        UName = UName;
+    public void setUName(String UName) {
+        this.UName = UName;
     }
 
-    public String getID() {
+    public String getIDcard() {
         return IDcard;
     }
 
-    public void setID(String ID) {
+    public void setIDcard(String IDcard) {
         this.IDcard = IDcard;
     }
 
@@ -74,6 +62,22 @@ public class RegisterData {
     public void setPhone(String phone) {
         Phone = phone;
     }
+
+    //    用户密码
+    public String pass;
+    //    确认密码
+    public String checkPass;
+    //    姓名
+    public String UName;
+    //    用户ID（身份证号、港澳台居民证等）
+    public String IDcard;
+    //    用户邮箱
+    public String Email;
+    //    用户手机号
+    public String Phone;
+
+
+
 }
 
 

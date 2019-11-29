@@ -1,22 +1,12 @@
 package com.ssm.pojo;
 
 public class Register {
-    //   用户名
-    private String UserName;
-    //    用户密码
-    private String pass;
-    //    确认密码
-    private String checkPass;
-    //    姓名
-    private String UName;
-    //    用户ID（身份证号、港澳台居民证等）
-    private String ID;
-    //    用户邮箱
-    private String Email;
-    //    用户手机号
-    private String Phone;
+    // 注册界面
 
+    //   用户名
     //以下是Set 和 Get方法
+    public String UserName;
+
     public String getUserName() {
         return UserName;
     }
@@ -41,20 +31,20 @@ public class Register {
         this.checkPass = checkPass;
     }
 
-    public String getName() {
+    public String getUName() {
         return UName;
     }
 
-    public void setName(String name) {
-        UName = name;
+    public void setUName(String UName) {
+        this.UName = UName;
     }
 
-    public String getID() {
-        return ID;
+    public String getIDcard() {
+        return IDcard;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
+    public void setIDcard(String IDcard) {
+        this.IDcard = IDcard;
     }
 
     public String getEmail() {
@@ -72,4 +62,21 @@ public class Register {
     public void setPhone(String phone) {
         Phone = phone;
     }
+
+    //    用户密码
+    public String pass;
+    //    确认密码
+    public String checkPass;
+    //    姓名
+    public String UName;
+    //    用户ID（身份证号、港澳台居民证等）
+    public String IDcard;
+    //    用户邮箱
+    public String Email;
+    //    用户手机号
+    public String Phone;
+
+
 }
+
+
