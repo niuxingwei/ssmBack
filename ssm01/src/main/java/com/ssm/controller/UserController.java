@@ -1,5 +1,11 @@
 package com.ssm.controller;
-
+/**
+ * @ClassName Login
+ * @Description 负责用户的登陆注册
+ * @Author 牛兴炜
+ * @Date 2019/11/28 23:26
+ * @Version 1.0
+ */
 import com.ssm.pojo.Login;
 import com.ssm.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,12 +36,12 @@ public class UserController {
     @ResponseBody
     public String getData(@RequestBody RegisterData register) {
         //         测试数据传递是否成功
-//        try {
+        try {
             userService.insertUser(register);
             return "scuuess";
-//        } catch (Exception e) {
-//            System.err.println("用户名已存在");
-//            return "fail";
-//        }
+        } catch (Exception e) {
+            System.err.println("用户名已存在");
+            return "fail";
+        }
     }
 }
