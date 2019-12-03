@@ -2,8 +2,72 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.ssm.dao.SearchDao">
-    <resultMap id="" type="">
+    <!--列车信息查询-->
+    <resultMap id="TrainList" type="com.ssm.pojo.train">
+        <id column="SStation" property="SStation"></id>
+        <id column="EStation" property="EStation"></id>
+        <id column="TrainNUmber" property="TrainNUmber"></id>
+        <id column="STime" property="STime"></id>
+        <id column="ETime" property="ETime"></id>
+    </resultMap>
+    <!--模糊查询属于该范围的字段-->
+    <select id="selectTrain" resultMap="TrainList">
+        SELECT *
+        FROM train
+        WHERE SStation LIKE #{SStation}
+          AND EStation LIKE #{EStation}
+    </select>
 
+    <!--车票信息查询-->
+    <resultMap id="TicketList" type="com.ssm.pojo.ticket">
+        <id column="UName" property="UName"></id>
+        <id column="Price" property="Price"></id>
+        <id column="BTime" property="BTime"></id>
+        <id column="ATIME" property="ATIME"></id>
+        <id column="TrainNUmber" property="TrainNUmber"></id>
+        <id column="BStation" property="BStation"></id>
+        <id column="AStation" property="AStation"></id>
+    </resultMap>
+    <select id="selectTicket" resultMap="TicketList">
+        SELECT *
+        FROM ticket
+        WHERE BStation LIKE #{SStation}
+          AND AStation LIKE #{EStation}
+    </select>
+
+    <!--用户信息查询-->
+    <!--根据用户在ticket表里面的姓名查询出用户的所有信息
+    UName是外键-->
+    <resultMap id="userList" type="com.ssm.pojo.Passenger">
+        <id column="ID" property="ID"></id>
+        <id column="UName" property="UName"></id>
+        <id column="Sex" property="Sex"></id>
+        <id column="IDcard" property="IDcard"></id>
+        <id column="Phone" property="Phone"></id>
+        <id column="BStation" property="BStation"></id>
+        <id column="AStation" property="AStation"></id>
     </resultMap>
 
+    <!--user 和 ticket的嵌套查询采用Mybatis的嵌套机制-->
+    <select id="selectPassenger" resultMap="userList">
+        SELECT *
+        FROM Passeng
+        WHERE BStation LIKE #{SStation}
+          AND AStation LIKE #{EStation}
+
+    </select>
+
+
+    <!--车站信息查询-->
+    <resultMap id="stationList" type="com.ssm.pojo.station">
+        <id column="ID" property="ID"></id>
+        <id column="City" property="City"></id>
+        <id column="Province" property="Province"></id>
+    </resultMap>
+    <!--采用嵌套查询-->
+    <select id="selectStation" resultMap="stationList">
+        SELECT *
+        FROM station
+        where City like #{SStation}
+    </select>
 </mapper>

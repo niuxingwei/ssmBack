@@ -10,22 +10,22 @@ import java.util.Date;
  * @Version 1.0
  */
 public class SearchCityData {
-    public String startCity;
+    public String SStation;
 
-    public String getStartCity() {
-        return startCity;
+    public String getSStation() {
+        return SStation;
     }
 
-    public void setStartCity(String startCity) {
-        this.startCity = startCity;
+    public void setSStation(String SStation) {
+        this.SStation = SStation;
     }
 
-    public String getEndCity() {
-        return endCity;
+    public String getEStation() {
+        return EStation;
     }
 
-    public void setEndCity(String endCity) {
-        this.endCity = endCity;
+    public void setEStation(String EStation) {
+        this.EStation = EStation;
     }
 
     public String getRadio() {
@@ -36,16 +36,18 @@ public class SearchCityData {
         this.radio = radio;
     }
 
-    public Date getSelectedTime() {
+
+    public String EStation;
+    public String radio;
+
+    public String getSelectedTime() {
         return selectedTime;
     }
 
-    public void setSelectedTime(Date selectedTime) {
+    public void setSelectedTime(String selectedTime) {
         this.selectedTime = selectedTime;
     }
 
-    public String endCity;
-    public String radio;
-    public Date selectedTime;
+    public String selectedTime;
 
 }

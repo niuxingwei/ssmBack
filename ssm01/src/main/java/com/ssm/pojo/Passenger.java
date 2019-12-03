@@ -7,8 +7,40 @@ package com.ssm.pojo;
  * @Date 2019/12/2 11:16
  * @Version 1.0
  */
+// user配合ticket进行嵌套查询
 public class Passenger {
+    public int ID;
     public String UName;
+    public String Sex;
+    public String IDcard;
+    public String Phone;
+    public String AStation;
+    public String BStation;
+
+    public String getAStation() {
+        return AStation;
+    }
+
+    public void setAStation(String AStation) {
+        this.AStation = AStation;
+    }
+
+    public String getBStation() {
+        return BStation;
+    }
+
+    public void setBStation(String BStation) {
+        this.BStation = BStation;
+    }
+
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 
     public String getUName() {
         return UName;
@@ -42,8 +74,5 @@ public class Passenger {
         Phone = phone;
     }
 
-    public String Sex;
-    public String IDcard;
-    public String Phone;
 
 }

@@ -1,6 +1,5 @@
 package com.ssm.service;
 
-import com.ssm.controller.LoginData;
 import com.ssm.controller.RegisterData;
 import com.ssm.dao.IUserDao;
 import com.ssm.pojo.Login;
